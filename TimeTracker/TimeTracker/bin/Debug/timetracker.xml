@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>timetracker</name>
+    </assembly>
+    <members>
+        <member name="T:System.Reflection.AssemblySourceLinkAttribute">
+            <summary>
+            Represents the Source Code Link Assembly Attribute
+            </summary>
+        </member>
+        <member name="M:System.Reflection.AssemblySourceLinkAttribute.#ctor(System.String)">
+            <summary>
+            Source Code Assembly Attribute Contructor
+            </summary>
+            <param name="link">The source code URI</param>
+        </member>
+        <member name="P:System.Reflection.AssemblySourceLinkAttribute.SourceLink">
+            <summary>
+            Returns the license URI
+            </summary>
+        </member>
+        <member name="T:System.Reflection.AssemblyLicenseAttribute">
+            <summary>
+            Represents the License Assembly Attribute
+            </summary>
+        </member>
+        <member name="M:System.Reflection.AssemblyLicenseAttribute.#ctor(System.String)">
+            <summary>
+            License Assembly Attribute Contructor
+            </summary>
+            <param name="license">The license text</param>
+        </member>
+        <member name="P:System.Reflection.AssemblyLicenseAttribute.License">
+            <summary>
+            Returns the license text
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:TimeTracker.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_categoryToolTip_Text">
+            <summary>
+              Looks up a localized string similar to Category name can contain only alphanumeric characters and these special characters: {0}.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_deleteMessageBox_Caption">
+            <summary>
+              Looks up a localized string similar to Delete entries.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_deleteMessageBox_Message">
+            <summary>
+              Looks up a localized string similar to You sure want to delete {0} entries?.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_fileErrorMessageBox_Caption">
+            <summary>
+              Looks up a localized string similar to File error.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_fileErrorMessageBox_Message">
+            <summary>
+              Looks up a localized string similar to Encountered an error while handling a file..
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_language_cs">
+            <summary>
+              Looks up a localized string similar to Czech.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_language_default">
+            <summary>
+              Looks up a localized string similar to &lt;default&gt;.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_language_en">
+            <summary>
+              Looks up a localized string similar to English.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_languageChangedMessageBox_Caption">
+            <summary>
+              Looks up a localized string similar to Language changed.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_languageChangedMessageBox_Message">
+            <summary>
+              Looks up a localized string similar to The change will take effect once the application restarts..
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_noDataLabel">
+            <summary>
+              Looks up a localized string similar to There are no tracking data yet. Start tracking by using the buttons above or opening a new file..
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_nonexistentFileMessageBox_Caption">
+            <summary>
+              Looks up a localized string similar to File does not exist.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_nonexistentFileMessageBox_Message">
+            <summary>
+              Looks up a localized string similar to Could not load specified file because it does not exist..
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_statsCategory_Text">
+            <summary>
+              Looks up a localized string similar to Category &quot;{0}&quot;: {1}.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_statsSelected_Text">
+            <summary>
+              Looks up a localized string similar to Selection ({0}): {1}.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_statsTotal_Text">
+            <summary>
+              Looks up a localized string similar to Total: {0}.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_unsavedMessageBox_Caption">
+            <summary>
+              Looks up a localized string similar to Save changes.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.Application_unsavedMessageBox_Message">
+            <summary>
+              Looks up a localized string similar to You have unsaved changes. Save now?.
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.clock1">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Properties.Resources.icon_delete">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:TimeTracker.TimeSpanExtension">
+            <summary>
+            Extends <see cref="T:System.TimeSpan"/> with convenience methods
+            </summary>
+        </member>
+        <member name="M:TimeTracker.TimeSpanExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.TimeSpan})">
+            <summary>
+            Sums TimeSpan values
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <param name="source"></param>
+            <param name="selector"></param>
+            <returns>The new, summed TimeSpan</returns>
+        </member>
+        <member name="M:TimeTracker.TimeSpanExtension.Format(System.TimeSpan)">
+            <summary>
+            Formats a TimeSpan value
+            </summary>
+            <param name="timeSpan">The timespan to be formatted</param>
+            <returns>The formatted string</returns>
+        </member>
+        <member name="T:TimeTracker.DataSerializer">
+            <summary>
+            TimeTracker Data Serializer
+            </summary>
+        </member>
+        <member name="M:TimeTracker.DataSerializer.Serialize(System.ComponentModel.BindingList{TimeTracker.Model.TimeTrackerData})">
+            <summary>
+            Serializes a whole data set
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TimeTracker.DataSerializer.SerializeValue(TimeTracker.Model.ITimeTrackerData)">
+            <summary>
+            Serializes a single Time Tracker Data Value
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TimeTracker.DataSerializer.DeserializeValue(System.String,System.Int32)">
+            <summary>
+            Deserielizes a single Time Tracker Data Value
+            </summary>
+            <param name="value"></param>
+            <param name="categoryMaxLength">Maximum length for Category</param>
+            <returns></returns>
+        </member>
+        <member name="T:TimeTracker.DeserializationException">
+            <summary>
+            Deserialization Exception
+            </summary>
+        </member>
+        <member name="M:TimeTracker.DeserializationException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:TimeTracker.TrackingService">
+            <summary>
+            A helper service managing tracking
+            </summary>
+        </member>
+        <member name="P:TimeTracker.TrackingService.Tracking">
+            <summary>
+            Stores whether we are currently tracking
+            </summary>
+        </member>
+        <member name="P:TimeTracker.TrackingService.StartTime">
+            <summary>
+            Returns tracking start time
+            </summary>
+        </member>
+        <member name="M:TimeTracker.TrackingService.Start">
+            <summary>
+            Starts tracking
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TimeTracker.TrackingService.Stop">
+            <summary>
+            Stops tracking
+            </summary>
+            <returns>The resulting TimeTrackerData</returns>
+        </member>
+        <member name="P:TimeTracker.TrackingService.Elapsed">
+            <summary>
+            Returns the elapsed time since tracking started
+            </summary>
+        </member>
+        <member name="T:TimeTracker.TrackingServiceException">
+            <summary>
+            Tracking Service Exception
+            </summary>
+        </member>
+        <member name="M:TimeTracker.TrackingServiceException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:TimeTracker.Model.ITimeTrackerData">
+            <summary>
+            TimeTrackerData Entity Interface
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Model.ITimeTrackerData.StartTime">
+            <summary>
+            Represents time when tracker was started
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Model.ITimeTrackerData.EndTime">
+            <summary>
+            Represents time when tracker was ended
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Model.ITimeTrackerData.Category">
+            <summary>
+            Represents this entry's category
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Model.ITimeTrackerData.TimeElapsed">
+            <summary>
+            Contains time elapsed as a user-friendly string
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Model.ITimeTrackerData.GetTimeElapsed">
+            <summary>
+            Represents the difference between start time and end time
+            </summary>
+        </member>
+        <member name="T:TimeTracker.Model.TimeTrackerData">
+            <summary>
+            Represents TimeTracker Data Entry
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Model.TimeTrackerData.StartTime">
+            <summary>
+            <see cref="P:TimeTracker.Model.ITimeTrackerData.StartTime"/>
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Model.TimeTrackerData.EndTime">
+            <summary>
+            <see cref="P:TimeTracker.Model.ITimeTrackerData.EndTime"/>
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Model.TimeTrackerData.Category">
+            <summary>
+            <see cref="P:TimeTracker.Model.ITimeTrackerData.Category"/>
+            </summary>
+        </member>
+        <member name="P:TimeTracker.Model.TimeTrackerData.TimeElapsed">
+            <summary>
+            Fake field to custom-format time-span
+            <see cref="P:TimeTracker.Model.ITimeTrackerData.TimeElapsed"/>
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Model.TimeTrackerData.#ctor(System.DateTimeOffset,TimeTracker.Model.TrackedDataCategory)">
+            <param name="endTime"></param>
+            <param name="category"></param>
+        </member>
+        <member name="M:TimeTracker.Model.TimeTrackerData.#ctor(System.DateTimeOffset,System.DateTimeOffset,TimeTracker.Model.TrackedDataCategory)">
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="category"></param>
+        </member>
+        <member name="M:TimeTracker.Model.TimeTrackerData.GetTimeElapsed">
+            <summary>
+            Returns the time span between start and end date/time
+            <see cref="M:TimeTracker.Model.ITimeTrackerData.GetTimeElapsed"/>
+            </summary>
+        </member>
+        <member name="T:TimeTracker.Model.TrackedDataCategory">
+            <summary>
+            Represents a time tracker data category
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Model.TrackedDataCategory.Name">
+            <summary>
+            Category name
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Model.TrackedDataCategory.#ctor(System.String)">
+            <summary>
+            Creates a category, setting its name
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:TimeTracker.Model.TrackedDataCategory.Equals(System.Object)">
+            <summary>
+            Custom equality comparison implementation
+            
+            Categories are considered equal when their names match
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TimeTracker.Model.TrackedDataCategory.GetHashCode">
+            <summary>
+            Custom HashCode implementation
+            
+            Categories return their Name's HashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TimeTracker.Model.TrackedDataCategory.ToString">
+            <summary>
+            Returns the category name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TimeTracker.Form.Application">
+            <summary>
+            Main application form class
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.FILE_EXT">
+            <summary>
+            Data file Extension
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.FILE_NAME">
+            <summary>
+            Default data file name
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.CATEGORY_MAXLENGTH">
+            <summary>
+            Maximum length of category name
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.Data">
+            <summary>
+            Contains tracker data
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.TrackingService">
+            <summary>
+            Tracking service that handles a single tracker
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.RefreshTimer">
+            <summary>
+            Timer used for UI refreshes
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.toolTip">
+            <summary>
+            Tooltip used in the form
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.file">
+            <summary>
+            Opened file (or stream)
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.defaultCulture">
+            <summary>
+            Saves the initial culture
+            </summary>
+        </member>
+        <member name="F:TimeTracker.Form.Application.isSaved">
+            <summary>
+            Stores whether the current state is saved
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Form.Application.#ctor">
+            <summary>
+            Main form of the application starts here
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Form.Application.RefreshTitle">
+            <summary>
+            Fills the language selection menu
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Form.Application.DataListChanged(System.Object,System.ComponentModel.ListChangedEventArgs)">
+            <summary>
+            Called on data list change
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:TimeTracker.Form.Application.exitToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Exit application when user clicks on File > Exit
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:TimeTracker.Form.Application.dataGridViewMain_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Display "about" dialog box
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:TimeTracker.Form.Application.RefreshEditButtons">
+            <summary>
+            Refreshes grid edit buttons when necessary to reflect options available to do with that data
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Form.Application.Save(System.Boolean)">
+            <summary>
+            Saves the current table to file
+            </summary>
+            <param name="forceOpenSaveWindow">Whether to open the save dialogue even when the target path is already known</param>
+        </member>
+        <member name="M:TimeTracker.Form.Application.Open">
+            <summary>
+            Opens an existing file with table data
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Form.Application.SaveIfNecessary">
+            <summary>
+            Checks whether there are any changes to the table, offering the user the option to save them
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TimeTracker.Form.Application.SaveAvailable">
+            <summary>
+            Checks whether save should be available
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TimeTracker.Form.Application.Application_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Application closing event
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:TimeTracker.Form.Application.RefreshCategoryPicker">
+            <summary>
+            Collects all categories from the data set and returns a unique set
+            </summary>
+            <returns>The set of categories</returns>
+            <summary>
+            Updates the category picker with newly-collected categories
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Form.Application.dataGridViewMain_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Draws a custom message inside the grid view when it's empty
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:TimeTracker.Form.Application.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TimeTracker.Form.Application.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TimeTracker.Form.Application.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
